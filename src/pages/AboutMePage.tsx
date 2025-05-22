@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-// Removed UserCircleIcon, assuming image.jpg will be used
+// Removed UserCircleIcon, assuming image.jpeg will be used
 // import { UserCircleIcon } from '@heroicons/react/24/solid'; 
-import aboutMeImage from '../assets/image.jpg'; // Import the image
+import aboutMeImage from '../assets/image.jpeg'; // Import the image
 
 const AboutMePage: React.FC = () => {
   return (
