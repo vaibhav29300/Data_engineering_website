@@ -10,6 +10,7 @@ const ResourcesPage = React.lazy(() => import('./pages/ResourcesPage'));
 const ToolsPage = React.lazy(() => import('./pages/ToolsPage'));
 const ProjectIdeasPage = React.lazy(() => import('./pages/ProjectIdeasPage'));
 const ResumeJobTipsPage = React.lazy(() => import('./pages/ResumeJobTipsPage'));
+const AboutMePage = React.lazy(() => import('./pages/AboutMePage'));
 
 const App: React.FC = () => {
   return (
@@ -31,6 +32,7 @@ const App: React.FC = () => {
               <Route path="/tools" element={<ToolsPage />} />
               <Route path="/projects" element={<ProjectIdeasPage />} />
               <Route path="/resume-tips" element={<ResumeJobTipsPage />} />
+              <Route path="/about-me" element={<AboutMePage />} />
             </Routes>
           </Suspense>
         </main>

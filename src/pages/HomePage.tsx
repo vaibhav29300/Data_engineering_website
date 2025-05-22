@@ -57,9 +57,9 @@ const HomePage: React.FC = () => {
         className="w-full max-w-4xl px-2"
       >
         <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-4 sm:mb-6">Quick Links</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
-          {[ "Roadmap", "Resources", "Tools", "Projects", "Resume Tips" ].map((item) => (
-            <Link key={item} to={`/${item.toLowerCase().replace(' ', '-')}`}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6">
+          {[ "Roadmap", "Resources", "Tools", "Projects", "Resume Tips", "About Me" ].map((item) => (
+            <Link key={item} to={`/${item.toLowerCase().replace(/\s+/g, '-')}`}>
               <motion.div 
                 whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
                 className="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-lg shadow-lg text-center cursor-pointer h-full flex items-center justify-center"

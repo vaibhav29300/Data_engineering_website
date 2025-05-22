@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { DocumentTextIcon, BriefcaseIcon, ShieldExclamationIcon, UserCircleIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { DocumentTextIcon, ShieldExclamationIcon, UserCircleIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 interface TipSection {
   id: string;

@@ -36,6 +36,7 @@ const Navbar: React.FC = () => {
     { to: "/tools", text: "Tools" },
     { to: "/projects", text: "Projects" },
     { to: "/resume-tips", text: "Resume Tips" },
+    { to: "/about-me", text: "About Me" },
   ];
 
   return (
