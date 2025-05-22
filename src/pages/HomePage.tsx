@@ -32,6 +32,15 @@ const HomePage: React.FC = () => {
               Start learning
             </motion.button>
           </Link>
+          <Link to="/about-me" className="w-full sm:w-auto">
+            <motion.button 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto bg-purple-500 hover:bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 text-base sm:text-lg"
+            >
+              Meet the Creator
+            </motion.button>
+          </Link>
         </div>
       </motion.div>
 

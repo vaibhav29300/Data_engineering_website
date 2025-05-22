@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { UserCircleIcon } from '@heroicons/react/24/solid'; // Using a solid icon for placeholder
+// Removed UserCircleIcon, assuming image.jpg will be used
+// import { UserCircleIcon } from '@heroicons/react/24/solid'; 
+import aboutMeImage from '../assets/image.jpg'; // Import the image
 
 const AboutMePage: React.FC = () => {
   return (
@@ -12,27 +14,30 @@ const AboutMePage: React.FC = () => {
         className="max-w-3xl mx-auto bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 md:p-10 rounded-xl shadow-2xl"
       >
         <div className="flex flex-col sm:flex-row items-center mb-6 sm:mb-8">
-          {/* Placeholder for animated image */}
-          <UserCircleIcon className="h-24 w-24 sm:h-32 sm:w-32 text-blue-500 dark:text-blue-400 mb-4 sm:mb-0 sm:mr-8 flex-shrink-0" />
+          <img 
+            src={aboutMeImage} 
+            alt="Vaibhav Shekhar - Creator" 
+            className="h-32 w-32 sm:h-40 sm:w-40 rounded-full object-cover mb-4 sm:mb-0 sm:mr-8 flex-shrink-0 shadow-lg"
+          />
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold text-center sm:text-left text-blue-600 dark:text-blue-400 mb-2 sm:mb-4">
               About the Creator
             </h1>
             <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 text-center sm:text-left leading-relaxed">
-              Hi, I'm Vaibhav Shekhar, a Data Engineer with 2 years of hands-on experience in building and optimizing data pipelines, analytical tools, and scalable systems. 
+              Hello there! I'm Vaibhav Shekhar. For the past two years, I've been diving deep into the world of data engineering, crafting and fine-tuning everything from data pipelines to analytical tools and robust, scalable systems.
             </p>
           </div>
         </div>
         
         <div className="space-y-4 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
           <p>
-            My journey in data science began with a project for Uber, where I contributed to solving real-world mobility challenges through data. 
+            My adventure in data kicked off with an exciting project for Uber, where I got to tackle real-world mobility puzzles using data.
           </p>
           <p>
-            Currently, I'm part of the engineering team at Syncron, focusing on developing robust software solutions that power intelligent after-sales service platforms. 
+            These days, you'll find me at Syncron, as part of the engineering crew. We're focused on building solid software solutions that drive intelligent after-sales service platforms. 
           </p>
           <p>
-            This website showcases my work, learnings, and ongoing passion for data-driven innovation.
+            This little corner of the web is where I share my projects, what I'm learning, and my general enthusiasm for all things data-driven. Hope you find something interesting!
           </p>
         </div>
 
