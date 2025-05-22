@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Data_engineering_website/static/css/main.e298de34.css",
+    "main.js": "/Data_engineering_website/static/js/main.7c28e376.js",
+    "static/js/511.487c7143.chunk.js": "/Data_engineering_website/static/js/511.487c7143.chunk.js",
+    "static/js/558.1ff3402f.chunk.js": "/Data_engineering_website/static/js/558.1ff3402f.chunk.js",
+    "static/js/204.fa3fd32b.chunk.js": "/Data_engineering_website/static/js/204.fa3fd32b.chunk.js",
+    "static/js/944.f9638e71.chunk.js": "/Data_engineering_website/static/js/944.f9638e71.chunk.js",
+    "static/js/491.a6ce5ad6.chunk.js": "/Data_engineering_website/static/js/491.a6ce5ad6.chunk.js",
+    "static/js/809.9fc55ef0.chunk.js": "/Data_engineering_website/static/js/809.9fc55ef0.chunk.js",
+    "static/js/453.f7f08c81.chunk.js": "/Data_engineering_website/static/js/453.f7f08c81.chunk.js",
+    "static/js/323.0cf3ba42.chunk.js": "/Data_engineering_website/static/js/323.0cf3ba42.chunk.js",
+    "index.html": "/Data_engineering_website/index.html",
+    "main.e298de34.css.map": "/Data_engineering_website/static/css/main.e298de34.css.map",
+    "main.7c28e376.js.map": "/Data_engineering_website/static/js/main.7c28e376.js.map",
+    "511.487c7143.chunk.js.map": "/Data_engineering_website/static/js/511.487c7143.chunk.js.map",
+    "558.1ff3402f.chunk.js.map": "/Data_engineering_website/static/js/558.1ff3402f.chunk.js.map",
+    "204.fa3fd32b.chunk.js.map": "/Data_engineering_website/static/js/204.fa3fd32b.chunk.js.map",
+    "944.f9638e71.chunk.js.map": "/Data_engineering_website/static/js/944.f9638e71.chunk.js.map",
+    "491.a6ce5ad6.chunk.js.map": "/Data_engineering_website/static/js/491.a6ce5ad6.chunk.js.map",
+    "809.9fc55ef0.chunk.js.map": "/Data_engineering_website/static/js/809.9fc55ef0.chunk.js.map",
+    "453.f7f08c81.chunk.js.map": "/Data_engineering_website/static/js/453.f7f08c81.chunk.js.map",
+    "323.0cf3ba42.chunk.js.map": "/Data_engineering_website/static/js/323.0cf3ba42.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e298de34.css",
+    "static/js/main.7c28e376.js"
+  ]
+}
