@@ -1,23 +1,29 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage'));
-const RoadmapPage = lazy(() => import('./pages/RoadmapPage'));
-const ResourcesPage = lazy(() => import('./pages/ResourcesPage'));
-const ToolsPage = lazy(() => import('./pages/ToolsPage'));
-const ProjectIdeasPage = lazy(() => import('./pages/ProjectIdeasPage'));
-const ResumeJobTipsPage = lazy(() => import('./pages/ResumeJobTipsPage'));
+// Lazy load pages
+const HomePage = React.lazy(() => import('./pages/HomePage'));
+const RoadmapPage = React.lazy(() => import('./pages/RoadmapPage'));
+const ResourcesPage = React.lazy(() => import('./pages/ResourcesPage'));
+const ToolsPage = React.lazy(() => import('./pages/ToolsPage'));
+const ProjectIdeasPage = React.lazy(() => import('./pages/ProjectIdeasPage'));
+const ResumeJobTipsPage = React.lazy(() => import('./pages/ResumeJobTipsPage'));
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <Router basename="/Data_engineering_website"> {/* Set basename for GitHub Pages */}
+      <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900">
         <Navbar />
-        <Suspense fallback={<div className='flex justify-center items-center h-screen text-xl text-gray-700 dark:text-gray-200'>Loading...</div>}>
-          <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="flex-grow container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+          <Suspense 
+            fallback={
+              <div className='flex justify-center items-center h-screen'>
+                <div className='animate-spin rounded-full h-16 w-16 sm:h-20 sm:w-20 border-t-4 border-b-4 border-blue-500 dark:border-blue-400'></div>
+              </div>
+            }
+          >
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/roadmap" element={<RoadmapPage />} />
@@ -25,10 +31,9 @@ const App: React.FC = () => {
               <Route path="/tools" element={<ToolsPage />} />
               <Route path="/projects" element={<ProjectIdeasPage />} />
               <Route path="/resume-tips" element={<ResumeJobTipsPage />} />
-              {/* You can add a 404 page here */}
             </Routes>
-          </main>
-        </Suspense>
+          </Suspense>
+        </main>
         <Footer />
       </div>
     </Router>

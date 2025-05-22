@@ -87,40 +87,40 @@ const roadmapData: RoadmapStage[] = [
 
 const RoadmapPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-8 sm:py-12 px-4">
       <motion.h1 
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12 text-blue-600 dark:text-blue-400"
+        className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-blue-600 dark:text-blue-400"
       >
         Your Data Engineering Roadmap
       </motion.h1>
 
-      <div className="space-y-16">
+      <div className="space-y-10 sm:space-y-16">
         {roadmapData.map((stage, index) => (
           <motion.section 
             key={stage.id}
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-blue-500/30 dark:hover:shadow-blue-400/30 transition-shadow duration-300"
+            className="bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-2xl hover:shadow-blue-500/30 dark:hover:shadow-blue-400/30 transition-shadow duration-300"
           >
-            <div className="flex items-center mb-4">
-              <stage.icon className="h-10 w-10 text-blue-500 dark:text-blue-400 mr-4" />
-              <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">{stage.title}</h2>
+            <div className="flex items-center mb-3 sm:mb-4">
+              <stage.icon className="h-8 w-8 sm:h-10 sm:w-10 text-blue-500 dark:text-blue-400 mr-3 sm:mr-4 flex-shrink-0" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">{stage.title}</h2>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{stage.description}</p>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">{stage.description}</p>
             
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-3">Key Learning Resources:</h3>
-              <ul className="list-disc list-inside space-y-2">
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-200 mb-2 sm:mb-3">Key Learning Resources:</h3>
+              <ul className="list-disc list-inside space-y-1 sm:space-y-2">
                 {stage.learningLinks.map(link => (
-                  <li key={link.name} className="text-gray-600 dark:text-gray-300">
+                  <li key={link.name} className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
                     <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                       {link.name}
                     </a>
-                    <span className={`ml-2 text-xs font-medium px-2 py-0.5 rounded-full 
+                    <span className={`ml-1 sm:ml-2 text-xs font-medium px-1.5 sm:px-2 py-0.5 rounded-full 
                       ${link.type === 'Course' ? 'bg-green-100 text-green-800 dark:bg-green-700 dark:text-green-200' : 
                         link.type === 'Blog' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-200' : 
                         'bg-purple-100 text-purple-800 dark:bg-purple-700 dark:text-purple-200'}
@@ -134,14 +134,14 @@ const RoadmapPage: React.FC = () => {
 
             {stage.codeSnippets && stage.codeSnippets.length > 0 && (
               <div>
-                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-3">Code Snippet Previews:</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-200 mb-2 sm:mb-3">Code Snippet Previews:</h3>
                 {stage.codeSnippets.map(snippet => (
-                  <div key={snippet.language} className="mb-4 bg-gray-900 dark:bg-gray-700 rounded-md shadow-inner overflow-hidden">
-                    <div className="bg-gray-700 dark:bg-gray-600 px-4 py-2 text-xs text-gray-300 dark:text-gray-200 font-mono flex justify-between items-center">
+                  <div key={snippet.language} className="mb-3 sm:mb-4 bg-gray-900 dark:bg-gray-700 rounded-md shadow-inner overflow-hidden">
+                    <div className="bg-gray-700 dark:bg-gray-600 px-3 sm:px-4 py-1.5 sm:py-2 text-xs text-gray-300 dark:text-gray-200 font-mono flex justify-between items-center">
                       <span>{snippet.language.toUpperCase()}</span>
-                      <CodeBracketIcon className="h-5 w-5"/>
+                      <CodeBracketIcon className="h-4 w-4 sm:h-5 sm:w-5"/>
                     </div>
-                    <pre className="p-4 text-sm text-white overflow-x-auto">
+                    <pre className="p-3 sm:p-4 text-xs sm:text-sm text-white overflow-x-auto">
                       <code>{snippet.code}</code>
                     </pre>
                   </div>

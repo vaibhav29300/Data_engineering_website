@@ -68,44 +68,44 @@ const toolsData: ToolCategory[] = [
 
 const ToolsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-8 sm:py-12 px-4">
       <motion.h1 
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12 text-purple-600 dark:text-purple-400"
+        className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-purple-600 dark:text-purple-400"
       >
         Essential Data Engineering Tools
       </motion.h1>
 
-      <div className="space-y-12">
+      <div className="space-y-10 sm:space-y-12">
         {toolsData.map((category, index) => (
           <motion.section 
             key={category.id}
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-purple-500/30 dark:hover:shadow-purple-400/30 transition-shadow duration-300"
+            className="bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-2xl hover:shadow-purple-500/30 dark:hover:shadow-purple-400/30 transition-shadow duration-300"
           >
-            <div className="flex items-center mb-6">
-              <category.icon className="h-10 w-10 text-purple-500 dark:text-purple-400 mr-4" />
-              <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">{category.name}</h2>
+            <div className="flex items-center mb-4 sm:mb-6">
+              <category.icon className="h-8 w-8 sm:h-10 sm:w-10 text-purple-500 dark:text-purple-400 mr-3 sm:mr-4 flex-shrink-0" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">{category.name}</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {category.tools.map(tool => (
                 <motion.div 
                   key={tool.name}
                   whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)"}}
-                  className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
+                  className="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 h-full flex flex-col"
                 >
-                  <h3 className="text-xl font-semibold text-purple-700 dark:text-purple-300 mb-2">{tool.name}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 flex-grow leading-relaxed">{tool.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-purple-700 dark:text-purple-300 mb-1 sm:mb-2">{tool.name}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4 flex-grow leading-relaxed">{tool.description}</p>
                   {tool.officialSite && (
                     <a 
                       href={tool.officialSite} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-sm text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors self-start mt-auto"
+                      className="text-xs sm:text-sm text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors self-start mt-auto"
                     >
                       Official Site →
                     </a>

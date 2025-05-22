@@ -21,7 +21,7 @@ const tipsData: TipSection[] = [
     points: [
       'Highlight relevant technical skills: Python, SQL, ETL tools (Airflow, Spark, Kafka), Cloud (AWS, GCP, Azure), Databases (SQL, NoSQL), Data Warehousing (Snowflake, Redshift), dbt.',
       'Use action verbs to describe your accomplishments (e.g., Developed, Implemented, Optimized, Led).',
-      'Quantify your achievements whenever possible (e.g., \"Reduced data processing time by 30%\").',
+      'Quantify your achievements whenever possible (e.g., "Reduced data processing time by 30%").',
       'Tailor your resume to each job description, emphasizing the skills and experiences most relevant to the role.',
       'Include a projects section showcasing your hands-on experience, especially if you have limited professional experience.',
       'Keep it concise and easy to read, ideally one page for less experienced candidates, maximum two pages for experienced.'
@@ -44,8 +44,8 @@ const tipsData: TipSection[] = [
     title: 'LinkedIn Optimization Tips',
     icon: UserCircleIcon,
     points: [
-      'Use a professional headshot and a compelling headline that includes \"Data Engineer\".',
-      'Write a detailed \"About\" section summarizing your skills, experience, and career aspirations.',
+      'Use a professional headshot and a compelling headline that includes "Data Engineer".',
+      'Write a detailed "About" section summarizing your skills, experience, and career aspirations.',
       'List your technical skills in the Skills section and get endorsements.',
       'Request recommendations from colleagues, supervisors, or mentors.',
       'Share relevant content, articles, or your own projects to showcase your expertise and engagement.',
@@ -69,38 +69,38 @@ const tipsData: TipSection[] = [
 
 const ResumeJobTipsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-8 sm:py-12 px-4">
       <motion.h1 
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12 text-teal-600 dark:text-teal-400"
+        className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-teal-600 dark:text-teal-400"
       >
         Resume & Job Application Tips
       </motion.h1>
 
-      <div className="space-y-12 max-w-4xl mx-auto">
+      <div className="space-y-10 sm:space-y-12 max-w-4xl mx-auto">
         {tipsData.map((section, index) => (
           <motion.section 
             key={section.id}
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
-            className="bg-gray-50 dark:bg-gray-800 p-6 sm:p-8 rounded-xl shadow-2xl hover:shadow-teal-500/30 dark:hover:shadow-teal-400/30 transition-shadow duration-300"
+            className="bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl hover:shadow-teal-500/30 dark:hover:shadow-teal-400/30 transition-shadow duration-300"
           >
-            <div className="flex items-center mb-6">
-              <section.icon className="h-10 w-10 text-teal-500 dark:text-teal-400 mr-4 flex-shrink-0" />
-              <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white">{section.title}</h2>
+            <div className="flex items-center mb-4 sm:mb-6">
+              <section.icon className="h-8 w-8 sm:h-10 sm:w-10 text-teal-500 dark:text-teal-400 mr-3 sm:mr-4 flex-shrink-0" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">{section.title}</h2>
             </div>
-            <ul className="list-disc list-inside space-y-3 text-gray-700 dark:text-gray-300 leading-relaxed pl-2 sm:pl-4">
+            <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed pl-1 sm:pl-2 md:pl-4">
               {section.points.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
             {section.subSections && section.subSections.map(sub => (
-                <div key={sub.title} className="mt-4 pl-6">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">{sub.title}</h3>
-                    <ul className="list-circle list-inside space-y-2 text-gray-600 dark:text-gray-400 leading-relaxed">
+                <div key={sub.title} className="mt-3 sm:mt-4 pl-4 sm:pl-6">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-100 mb-1.5 sm:mb-2">{sub.title}</h3>
+                    <ul className="list-circle list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed">
                         {sub.points.map((point, i) => (
                             <li key={i}>{point}</li>
                         ))}

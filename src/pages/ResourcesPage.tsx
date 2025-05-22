@@ -67,45 +67,45 @@ const resourcesData: ResourceCategory[] = [
 
 const ResourcesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-8 sm:py-12 px-4">
       <motion.h1 
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12 text-green-600 dark:text-green-400"
+        className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-green-600 dark:text-green-400"
       >
         Curated Data Engineering Resources
       </motion.h1>
 
-      <div className="space-y-12">
+      <div className="space-y-10 sm:space-y-12">
         {resourcesData.map((category, index) => (
           <motion.section 
             key={category.id}
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-green-500/30 dark:hover:shadow-green-400/30 transition-shadow duration-300"
+            className="bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-2xl hover:shadow-green-500/30 dark:hover:shadow-green-400/30 transition-shadow duration-300"
           >
-            <div className="flex items-center mb-6">
-              <category.icon className="h-10 w-10 text-green-500 dark:text-green-400 mr-4" />
-              <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">{category.name}</h2>
+            <div className="flex items-center mb-4 sm:mb-6">
+              <category.icon className="h-8 w-8 sm:h-10 sm:w-10 text-green-500 dark:text-green-400 mr-3 sm:mr-4 flex-shrink-0" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">{category.name}</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {category.items.map(item => (
                 <motion.div 
                   key={item.name}
                   whileHover={{ y: -5, boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)"}}
-                  className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-green-700 dark:text-green-300 mb-2">{item.name}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-3 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-green-700 dark:text-green-300 mb-1 sm:mb-2">{item.name}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-2 sm:mb-3 leading-relaxed">{item.description}</p>
                   <a 
                     href={item.url} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-flex items-center text-sm text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
+                    className="inline-flex items-center text-xs sm:text-sm text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
                   >
-                    Visit Resource <LinkIcon className="h-4 w-4 ml-1" />
+                    Visit Resource <LinkIcon className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
                   </a>
                 </motion.div>
               ))}

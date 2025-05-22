@@ -69,43 +69,43 @@ const ProjectIdeasPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-800 dark:text-white py-8 sm:py-12 px-4">
       <motion.h1 
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-center mb-12 text-orange-600 dark:text-orange-400"
+        className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-orange-600 dark:text-orange-400"
       >
         Data Engineering Project Ideas
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {projectIdeasData.map((project, index) => (
           <motion.div 
             key={project.id}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl shadow-2xl hover:shadow-orange-500/30 dark:hover:shadow-orange-400/30 transition-shadow duration-300 flex flex-col"
+            className="bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-2xl hover:shadow-orange-500/30 dark:hover:shadow-orange-400/30 transition-shadow duration-300 flex flex-col"
           >
-            <div className="flex items-start mb-4">
-              <LightBulbIcon className="h-10 w-10 text-orange-500 dark:text-orange-400 mr-4 flex-shrink-0 mt-1" />
+            <div className="flex items-start mb-3 sm:mb-4">
+              <LightBulbIcon className="h-8 w-8 sm:h-10 sm:w-10 text-orange-500 dark:text-orange-400 mr-3 sm:mr-4 flex-shrink-0 mt-1" />
               <div>
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-1">{project.title}</h2>
-                <span className={`px-3 py-1 text-xs font-semibold rounded-full ${getDifficultyClass(project.difficulty)}`}>
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-1">{project.title}</h2>
+                <span className={`px-2 sm:px-3 py-0.5 sm:py-1 text-xs font-semibold rounded-full ${getDifficultyClass(project.difficulty)}`}>
                   {project.difficulty}
                 </span>
               </div>
             </div>
-            <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed flex-grow text-sm">{project.description}</p>
+            <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed flex-grow">{project.description}</p>
             
-            <div className="mb-4">
-              <h3 className="text-md font-semibold text-gray-700 dark:text-gray-200 mb-2 flex items-center">
-                <WrenchScrewdriverIcon className="h-5 w-5 mr-2 text-orange-500 dark:text-orange-400" /> Tools Used:
+            <div className="mb-3 sm:mb-4">
+              <h3 className="text-sm sm:text-md font-semibold text-gray-700 dark:text-gray-200 mb-1.5 sm:mb-2 flex items-center">
+                <WrenchScrewdriverIcon className="h-4 w-4 sm:h-5 sm:w-5 mr-1.5 sm:mr-2 text-orange-500 dark:text-orange-400" /> Tools Used:
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1 sm:gap-2">
                 {project.tools.map(tool => (
-                  <span key={tool} className="bg-orange-100 dark:bg-orange-700 text-orange-800 dark:text-orange-200 text-xs px-2 py-1 rounded-md">
+                  <span key={tool} className="bg-orange-100 dark:bg-orange-700 text-orange-800 dark:text-orange-200 text-xs px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md">
                     {tool}
                   </span>
                 ))}
@@ -117,9 +117,9 @@ const ProjectIdeasPage: React.FC = () => {
                 href={project.tutorialLink} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center text-sm text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors mt-auto self-start"
+                className="inline-flex items-center text-xs sm:text-sm text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors mt-auto self-start"
               >
-                Starter Template/Tutorial <LinkIcon className="h-4 w-4 ml-1" />
+                Starter Template/Tutorial <LinkIcon className="h-3 w-3 sm:h-4 sm:w-4 ml-1" />
               </a>
             )}
           </motion.div>
