@@ -1,32 +1,32 @@
 {
   "files": {
     "main.css": "/Data_engineering_website/static/css/main.5f53c6b9.css",
-    "main.js": "/Data_engineering_website/static/js/main.f34050dd.js",
+    "main.js": "/Data_engineering_website/static/js/main.ce776d67.js",
     "static/js/511.68f488b8.chunk.js": "/Data_engineering_website/static/js/511.68f488b8.chunk.js",
     "static/js/558.6cbc0378.chunk.js": "/Data_engineering_website/static/js/558.6cbc0378.chunk.js",
     "static/js/204.d6bc3dd0.chunk.js": "/Data_engineering_website/static/js/204.d6bc3dd0.chunk.js",
     "static/js/944.3f196e9e.chunk.js": "/Data_engineering_website/static/js/944.3f196e9e.chunk.js",
     "static/js/491.0f12ac03.chunk.js": "/Data_engineering_website/static/js/491.0f12ac03.chunk.js",
     "static/js/809.33a484c4.chunk.js": "/Data_engineering_website/static/js/809.33a484c4.chunk.js",
-    "static/js/799.f29677aa.chunk.js": "/Data_engineering_website/static/js/799.f29677aa.chunk.js",
+    "static/js/733.2f8783cd.chunk.js": "/Data_engineering_website/static/js/733.2f8783cd.chunk.js",
     "static/js/453.f7f08c81.chunk.js": "/Data_engineering_website/static/js/453.f7f08c81.chunk.js",
     "static/js/323.0cf3ba42.chunk.js": "/Data_engineering_website/static/js/323.0cf3ba42.chunk.js",
-    "static/media/image.jpg": "/Data_engineering_website/static/media/image.0af10851f62f44a813f4.jpg",
+    "static/media/image.jpeg": "/Data_engineering_website/static/media/image.b00efc419278eb05ee67.jpeg",
     "index.html": "/Data_engineering_website/index.html",
     "main.5f53c6b9.css.map": "/Data_engineering_website/static/css/main.5f53c6b9.css.map",
-    "main.f34050dd.js.map": "/Data_engineering_website/static/js/main.f34050dd.js.map",
+    "main.ce776d67.js.map": "/Data_engineering_website/static/js/main.ce776d67.js.map",
     "511.68f488b8.chunk.js.map": "/Data_engineering_website/static/js/511.68f488b8.chunk.js.map",
     "558.6cbc0378.chunk.js.map": "/Data_engineering_website/static/js/558.6cbc0378.chunk.js.map",
     "204.d6bc3dd0.chunk.js.map": "/Data_engineering_website/static/js/204.d6bc3dd0.chunk.js.map",
     "944.3f196e9e.chunk.js.map": "/Data_engineering_website/static/js/944.3f196e9e.chunk.js.map",
     "491.0f12ac03.chunk.js.map": "/Data_engineering_website/static/js/491.0f12ac03.chunk.js.map",
     "809.33a484c4.chunk.js.map": "/Data_engineering_website/static/js/809.33a484c4.chunk.js.map",
-    "799.f29677aa.chunk.js.map": "/Data_engineering_website/static/js/799.f29677aa.chunk.js.map",
+    "733.2f8783cd.chunk.js.map": "/Data_engineering_website/static/js/733.2f8783cd.chunk.js.map",
     "453.f7f08c81.chunk.js.map": "/Data_engineering_website/static/js/453.f7f08c81.chunk.js.map",
     "323.0cf3ba42.chunk.js.map": "/Data_engineering_website/static/js/323.0cf3ba42.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f53c6b9.css",
-    "static/js/main.f34050dd.js"
+    "static/js/main.ce776d67.js"
   ]
 }
